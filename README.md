@@ -7,3 +7,6 @@ This is sample Array implementation, created for recruitment purposes
   - design_problems.md - another design problems with explanations and possible solutions
 - UnitTest - directory including UnitTests
   - UnitTest.cpp - Unit Test for bugs #1 and #2, created with *[MSVC UnitTest Framework API](https://docs.microsoft.com/pl-pl/visualstudio/test/microsoft-visualstudio-testtools-cppunittestframework-api-reference?view=vs-2019)*
+  
+## SQL task
+* Task1-SQL.txt contains answer for Task 1 (SQL query).
