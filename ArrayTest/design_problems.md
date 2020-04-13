@@ -1,4 +1,4 @@
-#Describing Array implementation design problems
+# Describing Array implementation design problems
 ## Main design problems
 * No default constructor defined
 * No copy constructor defined
