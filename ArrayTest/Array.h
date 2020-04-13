@@ -1,6 +1,4 @@
 #pragma once
-#include <cstring>
-
 template <class T>
 	class Array
 	{
@@ -10,7 +8,7 @@ template <class T>
 	public:
 		Array(unsigned int nSize) : m_nSize(nSize)
 		{
-			if (m_nSize > 0)	//cannot create empty array
+			if (m_nSize > 0)	//Cannot create empty array, passing 0 would result in initialized pointer
 			{
 				m_pData = new (std::nothrow) T[m_nSize];	//bug #1. no way to check if allocation has succeeded
 			}

@@ -13,16 +13,15 @@ template <class T>
 			m_pData = std::make_unique<T[]>(m_nSize);
 		}
 		virtual ~ArrayCorrect() = default;
-		bool Set(unsigned int nPos, const T& value)
+		void Set(unsigned int nPos, const T& value) throw(std::out_of_range)
 		{
 			if (nPos < m_nSize)
 			{
 				m_pData[nPos] = value;
-				return true;
 			}
 			else
 			{
-				return false;
+				throw std::out_of_range;
 			}
 		}
 		T Get(unsigned int nPos) throw(std::out_of_range)

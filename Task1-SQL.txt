@@ -1,0 +1,17 @@
+#1
+SELECT Name FROM Building
+WHERE CityID IN (
+		SELECT CityID FROM City WHERE CountryID IN (
+			SELECT CountryID FROM Country WHERE Name = 'Poland'));
+
+#2		
+SELECT * FROM Country
+INNER JOIN City ON Country.CountryID = City.CountryID
+	WHERE SUM(Population) > 400;
+
+#3	
+SELECT Name FROM Country
+WHERE CountryID IN (
+	SELECT CountryID
+		INNER JOIN Building ON City.CityID = Building.CityID
+			WHERE COUNT(BuildingID) = 0);

@@ -20,8 +20,8 @@ namespace UnitTest
 		TEST_METHOD(TestSetter)
 		{
 			Array<int> arr = Array<int>(1);
-			arr.Set(0, 0);
-			const wchar_t* msg = L"Attempting array out of range";
+			bool res = arr.Set(0, 0);
+			const wchar_t* msg = L"Attempting array value out of range";
 			Assert::AreEqual(arr.Get(1), 0, msg);
 		}
 	};
