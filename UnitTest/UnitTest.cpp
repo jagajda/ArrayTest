@@ -12,17 +12,18 @@ namespace UnitTest
 		
 		TEST_METHOD(TestConstructor)
 		{
-			unsigned int i = 1;
+			unsigned int i = 0;
 			const wchar_t* msg = L"Constructor failed";
 			Array<int> arr = Array<int>(i);
-			Assert::IsNull(arr.getPointer());
+			Assert::IsNotNull(arr.getPointer());
 		}
+
 		TEST_METHOD(TestSetter)
 		{
 			Array<int> arr = Array<int>(1);
 			bool res = arr.Set(0, 0);
 			const wchar_t* msg = L"Attempting array value out of range";
-			Assert::AreEqual(arr.Get(1), 0, msg);
+			Assert::AreNotEqual(arr.Get(1), 0, msg);
 		}
 	};
 }
